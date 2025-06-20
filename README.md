@@ -1,0 +1,2 @@
+# attestation-demo
+This repo provides an example of how to create and attest a container image using [GitHub Artifact Attestations](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds)

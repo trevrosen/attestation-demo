@@ -30,4 +30,4 @@ The short SHA tag provides immutability and traceability, making it easier to:
 
 ## Container Attestation
 
-Each container image pushed to GHCR includes a signed attestation that provides cryptographic proof of the build process. The attestation is automatically generated and pushed by the GitHub Actions workflow and applies to both the `latest` and commit-specific tags.
+Each container image pushed to GHCR includes a attestation that provides cryptographic proof of the build process. The attestation is automatically generated and pushed by the GitHub Actions workflow and applies to both the `latest` and commit-specific tags.

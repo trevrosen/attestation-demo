@@ -20,7 +20,7 @@ You can pull a specific version of the image using either tag:
 docker pull ghcr.io/trevrosen/attestation-demo:latest
 
 # Pull a specific commit version
-docker pull ghcr.io/trevrosen/attestation-demo:sha-<commit>
+docker pull ghcr.io/trevrosen/attestation-demo:<short sha>
 ```
 
 The short SHA tag provides immutability and traceability, making it easier to:

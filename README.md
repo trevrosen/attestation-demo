@@ -7,8 +7,8 @@ This repo provides an example of how to create and attest a container image usin
 The GitHub Actions workflow builds and pushes the container image to GitHub Container Registry (GHCR) with two tags:
 
 1. `latest` - Always points to the most recent successful build from the main branch
-2. `sha-<commit>` - Contains the short SHA of the Git commit that triggered the build
-   - Example: `ghcr.io/trevrosen/attestation-demo:sha-a1b2c3d`
+2. `<short sha>` - Contains the short SHA of the Git commit that triggered the build
+   - Example: `ghcr.io/trevrosen/attestation-demo:a1b2c3d`
    - This allows for precise tracking of which code version is running in the container
 
 ### Accessing Tagged Images

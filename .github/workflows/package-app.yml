@@ -20,6 +20,7 @@ jobs:
         run: zip app-package.zip app.py
 
       - name: Upload artifact
+        id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-package
@@ -29,4 +30,4 @@ jobs:
       - name: Generate provenance attestation
         uses: actions/attest-build-provenance@v2
         with:
-          subject-name: app-package.zip
+          subject-path: ${{ steps.upload-artifact.outputs.artifact-path }}

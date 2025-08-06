@@ -30,4 +30,5 @@ jobs:
       - name: Generate provenance attestation
         uses: actions/attest-build-provenance@v2
         with:
+          subject-name: app-package.zip
           subject-digest: ${{ steps.upload-artifact.outputs.artifact-digest }}

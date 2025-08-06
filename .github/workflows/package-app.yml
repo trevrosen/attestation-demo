@@ -1,0 +1,32 @@
+name: Package Application
+
+on:
+  workflow_dispatch:
+
+jobs:
+  package-and-attest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      attestations: write
+      id-token: write
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Create zip archive
+        run: zip app-package.zip app.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-package
+          path: app-package.zip
+          retention-days: 5
+
+      - name: Generate provenance attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: app-package.zip
